@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <section class="col-md-4 offset-md-4 mt-5">
+
+            <form action="/create_task/" method="POST" class="card card-body" enctype="multipart/form-data">
+
+                <h1 class="text-center">Reportar</h1>
+
+                {{error}}
+
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="id_rut">RUT:</label>
+                    <input type="text" name="rut" required id="id_rut" class="form-control" placeholder="Rut">
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_email">Email</label>
+                    <input type="email" name="email" required id="id_email" class="form-control" placeholder="email">
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_descripcion">Descripcion</label>
+                    <input type="text" name="descripcion" required id="id_descripcion" class="form-control"
+                        placeholder="Ingresa una descripcion">
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_evidencia">Evidencia (JPG)</label>
+                    <input type="file" name="evidencia" accept="image/*" required id="id_evidencia"
+                        class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_latitud">Latitud</label>
+                    <input type="number" name="latitud" step="0.000001" required id="id_latitud" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_longitud">Longitud</label>
+                    <input type="number" name="longitud" step="0.000001" required id="id_longitud" class="form-control">
+                </div>
+
+
+                <button class="btn btn-primary">
+                    Enviar
+                </button>
+
+
+            </form>
+
+
+
+        </section>
+
+    </div>
+
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<div class="row mt-4">
+    <div class="col-md-2">
+        <h3>Mapa Zona de Riesgos</h3>
+            <p class="lead">Top 10 Ubicaciones</p>
+
+        <ol class="list-group list-group-numbered">
+            {% for location in locations|slice:":10" %} <!--solo muestra un top 10-->
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{ location.user.username }}</div>
+                    {{ location.descripcion }}
+                </div>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="col-md-9">
+        {{ map|safe }}
+    </div>
+</div>
+
+
+{% endblock %}

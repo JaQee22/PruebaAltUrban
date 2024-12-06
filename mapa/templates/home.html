@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<main>
+
+    <section class="py-5 text-center container">
+
+        <div class="row py-lg-5">
+
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+                <h1 class="fw-light">¿Como Funciona AltUrban?</h1>
+                <p class="lead text-muted">AltUrban es una plataforma innovadora que te 
+                    permite comunicar problemas de infraestructura urban directamente a las 
+                    autoridades competentes. Registrate, reporta problemas con una descripción,
+                    una foto y la ubicacion. !y listo¡ Tu constribucion ayuda a mentener nuestras
+                    ciudades seguras y funcionales.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- Primera imagen-->
+                        <img src="{% static 'imagenes/bache1.jpg' %}" alt="" width="100%" height="225">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- Segunda imagen-->
+                        <img src="{% static 'imagenes/bache2.jpg' %}" alt="" width="100%" height="225">
+                        <div class="card-body">
+                            <p></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- Tercera imagen-->
+                        <img src="{% static 'imagenes/cable 1.jpg' %}" alt="" width="100%" height="225">
+                        <div class="card-body">
+                            <p></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- cuarta imagen-->
+                        <img src="{% static 'imagenes/cable-caido.jpg' %}" alt="" width="100%" height="225">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- quinta imagen-->
+                        <img src="{% static 'imagenes/cable-caido2.jpg' %}" alt="" width="100%" height="225">
+                        <div class="card-body">
+                            <p></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- sexta imagen-->
+                        <img src="{% static 'imagenes/cables2.jpg' %}" alt="" width="100%" height="225">
+                        <div class="card-body">
+                            <p></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+{% endblock %}
